@@ -1,0 +1,39 @@
+{
+  "name": "mcp-server-m365-roadmap",
+  "version": "1.0.0",
+  "description": "MCP server for Microsoft 365 Roadmap items",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "m365-roadmap": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "mcp",
+    "microsoft365",
+    "roadmap",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2",
+    "tsx": "^4.19.2"
+  }
+}
